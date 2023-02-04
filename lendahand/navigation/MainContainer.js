@@ -3,7 +3,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
-import Login from './screens/Login';
 import Lend from './screens/Lend';
 import Post from './screens/Post';
 import Profile from './screens/Profile';
@@ -15,10 +14,10 @@ const profileTabText = "Profile";
 
 export default function MainContainer() {
     return(
-        <NavigationContainer>
-            <Tab.Navigator
+        <Tab.Navigator
             initialRouteName={lendTabText}
             screenOptions={({ route }) => ({
+            headerShown: false,
             tabBarActiveTintColor: '#3e5ea8',
             tabBarInactiveTintColor: 'grey',
             tabBarLabelStyle: [{
@@ -48,7 +47,6 @@ export default function MainContainer() {
             <Tab.Screen name={lendTabText} component={Lend} />
             <Tab.Screen name={postTabText} component={Post} />
             <Tab.Screen name={profileTabText} component={Profile} />
-            </Tab.Navigator>
-        </NavigationContainer>
+        </Tab.Navigator>
     );
 }
