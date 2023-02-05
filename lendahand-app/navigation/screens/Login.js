@@ -17,15 +17,15 @@ export default function Login() {
   
   const navigation = useNavigation();
 
-  // useEffect(() => {
-  //   const unsubscribe = auth.onAuthStateChanged(user => {
-  //     if (user) {
-  //       navigation.replace("MainContainer")                              // Automatically logged in
-  //     }
-  //   })
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      if (user) {
+        navigation.replace("MainContainer")                              // Automatically logged in
+      }
+    })
 
-  //   return unsubscribe
-  // }, [])
+    return unsubscribe
+  }, [])
 
   const handleSignUp = () => {                                  // SIGN UP
     createUserWithEmailAndPassword(auth, email, password)
