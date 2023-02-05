@@ -21,8 +21,11 @@ export default function Lend() {
             tabBarLabelStyle: { fontSize: 16 },
             tabBarStyle: {
                 marginTop: marginHeight,
-                backgroundColor: '#ededed'
+                backgroundColor: '#ededed',
             },
+            tabBarIndicatorStyle: {
+                backgroundColor: '#495371'
+            }
         }}
     >
       <Tab.Screen name="For You" component={ForYou} />

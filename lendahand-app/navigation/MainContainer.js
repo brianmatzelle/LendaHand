@@ -18,7 +18,7 @@ export default function MainContainer() {
             initialRouteName={lendTabText}
             screenOptions={({ route }) => ({
             headerShown: false,
-            tabBarActiveTintColor: '#3e5ea8',
+            tabBarActiveTintColor: '#495371',
             tabBarInactiveTintColor: 'grey',
             tabBarLabelStyle: [{
                 display: "flex"

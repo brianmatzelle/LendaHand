@@ -6,14 +6,16 @@ import * as Location from 'expo-location';
 import { eventsDict } from '../Lend';
 
 const imageSrc = require('./assets/current-location.png');
-const personMarkerSrc = require('./assets/person-location.png')
+const personMarkerSrc = require('./assets/person-location.png');
+const redMarkerSrc = require('./assets/3d-marker.png');
+
+const BINGHAMTON_COORDS = {
+  latitude: 42.0894,
+  longitude: -75.9695,
+  latitudeDelta: 0.01,
+  longitudeDelta: 0.01,
+};
 function getLocation() {
-  const BINGHAMTON_COORDS = {
-    latitude: 42.0894,
-    longitude: -75.9695,
-    latitudeDelta: 0.07,
-    longitudeDelta: 0.03,
-  };
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
 
@@ -51,14 +53,14 @@ function getLocation() {
 }
 
 export default function Map() {
-  // console.log(text);
 
   const USER_LOCATION = getLocation();
 
   return (
     <View style={styles.container}>
       <MapView 
-      initialRegion={USER_LOCATION}
+      // initialRegion={USER_LOCATION}
+      initialRegion={BINGHAMTON_COORDS}
       provider={PROVIDER_GOOGLE}
       style={styles.map} 
       >
@@ -76,7 +78,7 @@ export default function Map() {
                 <Marker
                 title={eventObj.name}
                 key={eventObj.x_loc}
-                // image={personMarkerSrc}
+                image={personMarkerSrc}
                 coordinate={{
                   latitude: eventObj.x_loc,
                   longitude: eventObj.y_loc,

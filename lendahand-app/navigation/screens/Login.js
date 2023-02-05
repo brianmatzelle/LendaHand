@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { TouchableOpacity, KeyboardAvoidingView, TextInput, StyleSheet, Text, View, Dimensions, Image} from 'react-native'
+import { KeyboardAvoidingView, TextInput, Text, View, Dimensions, Image} from 'react-native'
 import { auth } from '../../firebase'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
 import { useEffect } from 'react/cjs/react.development'
@@ -81,25 +81,32 @@ export default function Login() {
       </View>
 
       <View style={styles.buttonContainer}>
-        <ThemedButton
-          onPress={handleSignIn}
+      <ThemedButton
           name="bruce"
           type="primary"
+          onPress={handleSignIn}
           style={styles.button}
           width={buttonWidth}
-        >
-          <Text style={styles.buttonText}>Login</Text>
-        </ThemedButton>
+          borderColor="#495371"
+          backgroundColor="#495371"
+          backgroundDarker='#5b668c'
+      >
+        Login
+      </ThemedButton>
 
-        <ThemedButton
-          name="bruce"
-          onPress={handleSignUp}
-          type="secondary"
-          width={buttonWidth}
-          style={styles.button}
-        >
-          <Text style={styles.buttonOutlineText}>Register</Text>
-        </ThemedButton>
+      <ThemedButton
+        name="bruce"
+        type="secondary"
+        onPress={handleSignUp}
+        style={styles.button}
+        width={buttonWidth}
+        borderColor="#F1E0AC"
+        backgroundColor="#F1E0AC"
+        backgroundDarker='#98B4AA'
+        backgroundShadow='#b8ccc5'
+      >
+        Register
+      </ThemedButton>
 
       </View>
     </KeyboardAvoidingView>
