@@ -10,8 +10,8 @@ const feedRouter = require("./routes/feed"); // import routes for feed
 
 var app = express();
 
-var cors = require("cors");
-app.use(cors());
+// var cors = require("cors");
+// app.use(cors());
 
 //  connect to database
 require("dotenv").config();

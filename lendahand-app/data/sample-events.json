@@ -1,7 +1,17 @@
 {
     "features": 
     [
-
+        {
+            "name":"Left My Pencil at My Dorm",
+            "t_event":"3",
+            "date":"2023-02-06",
+            "time":1260,
+            "x_loc":42.089099,
+            "y_loc":-75.962957,
+            "description":"Help, I have a midterm in 5 minutes and nothing to fill it out with, I'll give it right back I PROMISE.",
+            "attendants": "",
+            "host": "Dave Garrison"
+        },
         {
         "name":"Lawncare Assistance",
         "t_event":"0",
@@ -14,28 +24,6 @@
         "host": "George Weinschenk"
         },
         {
-        "name":"Food Bank Sorting",
-        "t_event":"2",
-        "date":"2023-02-06",
-        "time":690,
-        "x_loc":42.09938418529862,
-        "y_loc":-75.9129871540526,
-        "description":"Looking for volunteers to help at our local food bank. Duties include sorting and packaging food donations, assisting with distribution, and supporting clients. No prior experience required, just a kind heart and a willingness to make a difference. Thank you for your support!",
-        "attendants":"",
-        "host": "Dave Garrison"
-        },
-        {
-        "name":"XMas Light Removal",
-        "t_event":"0",
-        "date":"2023-02-06",
-        "time":720,
-        "x_loc":42.090308,
-        "y_loc":-75.909539,
-        "description":"Hello, my name is Tom and I am an elderly man. I am in need of assistance taking down my Christmas lights. I am not as steady on my feet as I used to be, and would greatly appreciate any help. If you are available and willing to lend a hand, I would be most grateful.",
-        "attendants": "",
-        "host": "Mike Lewis"
-        },
-        {
         "name":"Community Garden",
         "t_event":"2",
         "date":"2023-02-07",
@@ -44,7 +32,7 @@
         "y_loc":-75.922181,
         "description":"Join us in restoring our community garden! We need volunteers to help clean up the space, plant flowers and vegetables, and maintain the garden. No gardening experience necessary, just a passion for green spaces and community building. Let's work together to create a beautiful and productive garden for all to enjoy.",
         "attendants": "",
-        "host": "EILEEN"
+        "host": "Blueface"
         },
         {
         "name":"Highway Cleanup",
@@ -88,7 +76,7 @@
         "y_loc":-75.975206,
         "description":"Need assistance fixing a leaky hose. Any handy individuals willing to help with the repair? Much appreciated.",
         "attendants": "",
-        "host": "test"
+        "host": "Guy"
         },
         {
         "name":"Elderly Computer Help Needed",
@@ -99,29 +87,7 @@
         "y_loc":-75.955992,
         "description":"Hello, my name is Skipper and I am an elderly man. I am in need of assistance with my computer. I'm not very tech-savvy and am having trouble with some basic functions. If there is anyone who is able to help me resolve these issues, I would be eternally grateful. Thank you!",
         "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Ride Needed to Church",
-        "t_event":"1",
-        "date":"2023-02-07",
-        "time":690,
-        "x_loc":42.101556,
-        "y_loc":-75.951932,
-        "description":"Need a ride to church this Sunday. Anyone available to provide transportation? Thank you for your help.",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Snowblowing Needed",
-        "t_event":"0",
-        "date":"2023-02-06",
-        "time":830,
-        "x_loc":42.104808,
-        "y_loc":-75.940068,
-        "description":"Single mom in need of assistance snowblowing my driveway. Any volunteers willing to help shovel the snow? Your help would be greatly appreciated.",
-        "attendants": "",
-        "host": "test"
+        "host": "EILEEN"
         },
         {
         "name":"Ice Removal Please!",
@@ -131,83 +97,6 @@
         "x_loc":42.114358,
         "y_loc":-75.960241,
         "description":"Winter has arrived and I need help salting my driveway. If anyone is available to assist, I would be most grateful. With the cold weather and icy conditions, having a clear and safe path to my front door is a top priority. Thank you for your consideration.",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Moving out Need Muscles! <3",
-        "t_event":"0",
-        "date":"2023-02-06",
-        "time":990,
-        "x_loc":42.087046,
-        "y_loc":-75.971839,
-        "description":"Need help moving out of my apartment. Looking for strong individuals to assist with lifting and transporting boxes. Will be grateful for any help offered. Thank you!",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Trampoline Installation",
-        "t_event":"1",
-        "date":"2023-02-07",
-        "time":830,
-        "x_loc":42.109941,
-        "y_loc":-75.928745,
-        "description":"Need assistance building a trampoline. Anyone skilled in assembly and willing to help? Thank you for your support.",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Pool Vacuuming Assistance",
-        "t_event":"0",
-        "date":"2023-02-08",
-        "time":830,
-        "x_loc":42.089030,
-        "y_loc":-75.946711,
-        "description":"Pool in need of a deep clean. Looking for volunteers to assist with cleaning and maintaining the pool. Will be grateful for any help offered. Thank you!",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Repair Swing Set",
-        "t_event":"0",
-        "date":"2023-02-09",
-        "time":630,
-        "x_loc":42.082154,
-        "y_loc":-75.955984,
-        "description":"Community volunteer needed! I am in need of assistance with repairing my swing set. Any handy individuals willing to help fix broken chains and tighten bolts? Your time and effort would be greatly appreciated. Please reach out if you can lend a hand.",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Dog Needs Friends :(",
-        "t_event":"3",
-        "date":"2023-02-10",
-        "time":630,
-        "x_loc":42.075662,
-        "y_loc":-75.905609,
-        "description":"My dog is incredibly shy and he is getting older. I need him to find some friends as he is getting too clingy.",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Model Needed",
-        "t_event":"3",
-        "date":"2023-02-06",
-        "time":630,
-        "x_loc":42.090920,
-        "y_loc":-75.898964,
-        "description":"Pretty Pplz only",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Help me braid my daughter's hair",
-        "t_event":"3",
-        "date":"2023-02-05",
-        "time":630,
-        "x_loc":42.108697,
-        "y_loc":-75.887582,
-        "description":"Hair braiding help needed! I am a dad trying to braid my daughter's hair and I'm in over my head. Is there anyone experienced in braiding who could help us out? I would be eternally grateful for any assistance. Thank you for considering.",
         "attendants": "",
         "host": "test"
         },
@@ -245,182 +134,6 @@
         "host": "test"
         },
         {
-        "name":"Mower Wont Start",
-        "t_event":"0",
-        "date":"2023-02-07",
-        "time":930,
-        "x_loc":42.098975,
-        "y_loc":-75.921237,
-        "description":"Mechanical volunteer needed! My lawn mower needs repair and I am seeking assistance. Is there anyone experienced with fixing small engines who can help me out? Your time and expertise would be greatly appreciated. Thank you for considering.",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Clogged Chimney",
-        "t_event":"0",
-        "date":"2023-02-06",
-        "time":930,
-        "x_loc":42.087760,
-        "y_loc":-75.954967,
-        "description":"Any volunteer chimney repairmen? We have a family of raccoons burrowing in ours and don't want to lose in a fight against them again.",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Stalled Vehicle",
-        "t_event":"3",
-        "date":"2023-02-06",
-        "time":930,
-        "x_loc":42.095531,
-        "y_loc":-75.969693,
-        "description":"Mechanic needed! My car's engine has stalled and I need help fixing it.",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Grill Lid Stuck",
-        "t_event":"0",
-        "date":"2023-02-06",
-        "time":630,
-        "x_loc":42.087216,
-        "y_loc":-75.977764,
-        "description":"WD40 needed! I'm trying to open my grill but it's stuck. Can anyone lend me a can of WD40 to help me get it open? Thank you for your help.",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Park Grass Dying",
-        "t_event":"2",
-        "date":"2023-02-07",
-        "time":990,
-        "x_loc":42.093675,
-        "y_loc":-75.963993,
-        "description":"Lawn watering needed! My lawn is in need of watering. Can anyone help me out by giving it a good soak? Thank you for considering.",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Chaperone Needed",
-        "t_event":"2",
-        "date":"2023-02-08",
-        "time":560,
-        "x_loc":42.098294,
-        "y_loc":-75.920074,
-        "description":"Field trip chaperone needed! I am in need of an adult chaperone for an upcoming school field trip. Is there anyone available who can join us and help ensure the safety of our students? Your help would be greatly appreciated. Thank you for considering.",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Mailbox Ran Over Repair Needed",
-        "t_event":"1",
-        "date":"2023-02-07",
-        "time":490,
-        "x_loc":42.092211,
-        "y_loc":-75.927535,
-        "description":"Some hooligans ran over my pink mailbox yesterday, looking to get them back with a CEMENT one!! Any experience in concrete needed",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Hackathon Help",
-        "t_event":"3",
-        "date":"2023-02-08",
-        "time":600,
-        "x_loc":42.093362,
-        "y_loc":-75.959219,
-        "description":"Help!! My C code will not compile and I have to submit this in 30 minutes!!",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"CS350 Tutoring Needed",
-        "t_event":"3",
-        "date":"2023-02-06",
-        "time":600,
-        "x_loc":42.088590,
-        "y_loc":-75.971188,
-        "description":"HELP!! Prof Boubin has been speeding through our course content and I don't understand who or what a Kernel is... any assistance would be helpful",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Grammar Assistance Needed!!!",
-        "t_event":"3",
-        "date":"2023-02-07",
-        "time":690,
-        "x_loc":42.088208,
-        "y_loc":-75.969223,
-        "description":"I;kevin maynard; cant not get good grades in CS301 help -- me learn grammar. rules!!",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Track Covered in Snow!",
-        "t_event":"2",
-        "date":"2023-02-06",
-        "time":730,
-        "x_loc":42.092587,
-        "y_loc":-75.965264,
-        "description":"Snow shoveling help needed! Our running track needs clearing of snow. Can anyone assist in shoveling it off so we can use it again?",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Plants Withering <\/3",
-        "t_event":"0",
-        "date":"2023-02-06",
-        "time":730,
-        "x_loc":42.090095,
-        "y_loc":-75.969792,
-        "description":"Plant help needed! My plants are dying and I don't know why. Can anyone recommend a solution or provide tips on how to save them? I would greatly appreciate any advice on how to keep them healthy!!",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Cat Got Out",
-        "t_event":"1",
-        "date":"2023-02-06",
-        "time":1130,
-        "x_loc":42.097825,
-        "y_loc":-75.921726,
-        "description":"HELP!! My two cats, Peach and Daisy got out this weekend.. They are black and white and cute all over.. keep an eye out and help me look around Murray Street please.",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Cake Baking Gone Wrong",
-        "t_event":"3",
-        "date":"2023-02-06",
-        "time":1130,
-        "x_loc":42.103196,
-        "y_loc":-75.921108,
-        "description":"Baking lessons needed! I want to learn how to bake. Is there anyone experienced in baking who can teach me the basics? Your time and guidance would be greatly appreciated. ",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Reorganizing Living Room",
-        "t_event":"0",
-        "date":"2023-02-07",
-        "time":930,
-        "x_loc":42.074648,
-        "y_loc":-75.954668,
-        "description":"Living room rearranging help needed! I want to rearrange my living room furniture but need assistance. Can anyone help move the heavy items and provide suggestions on the best layout? ",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Heavy Luggage",
-        "t_event":"3",
-        "date":"2023-02-07",
-        "time":860,
-        "x_loc":42.101008,
-        "y_loc":-75.909986,
-        "description":"Luggage moving help needed! I need assistance in moving heavy luggage. Is there anyone available who can lend a hand and help me get it to my car?",
-        "attendants": "",
-        "host": "test"
-        },
-        {
         "name":"Taxes Confuse Me!",
         "t_event":"1",
         "date":"2023-02-07",
@@ -428,193 +141,6 @@
         "x_loc":42.087593,
         "y_loc":-76.002326,
         "description":"Tax help needed! I need assistance with filing my taxes. Can anyone recommend a reliable and affordable tax professional or provide guidance on how to do it myself? Your help would be greatly appreciated. Thank you for considering.",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Students Need A Soccer Ball",
-        "t_event":"3",
-        "date":"2023-02-07",
-        "time":1530,
-        "x_loc":42.093625,
-        "y_loc":-75.969923,
-        "description":"Soccer ball needed! I'm in need of a soccer ball for a pick-up game. Can anyone lend me one for the afternoon? I will make sure to return it promptly.",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Left My Pencil at My Dorm",
-        "t_event":"3",
-        "date":"2023-02-06",
-        "time":1260,
-        "x_loc":42.089099,
-        "y_loc":-75.962957,
-        "description":"Help, I have a midterm in 5 minutes and nothing to fill it out with, I'll give it right back I PROMISE.",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Heavy Desk in Wrong Room",
-        "t_event":"0",
-        "date":"2023-02-06",
-        "time":300,
-        "x_loc":42.085142,
-        "y_loc":-75.971916,
-        "description":"Somebody moved their desk out of thier room and into our common room, no clue how they got in here we just need help getting it out... Any assistance is appreciated",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Campus Bike Broke Down",
-        "t_event":"3",
-        "date":"2023-02-06",
-        "time":300,
-        "x_loc":42.090131,
-        "y_loc":-75.973019,
-        "description":"I peddled way too fast.. Tried racing my friend around the BU brain and my bike chain popped right off, anyone able to lend me a hand?",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Sled Borrowing",
-        "t_event":"3",
-        "date":"2023-02-06",
-        "time":930,
-        "x_loc":42.082865,
-        "y_loc":-75.959825,
-        "description":"Friends bet me 20 dollars I couldn't surf a snowboard down from Mountainview, I've got the gusto now all I need is the sled, please help!",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Snowblowing Needed",
-        "t_event":"1",
-        "date":"2023-02-06",
-        "time":560,
-        "x_loc":42.115682,
-        "y_loc":-75.965458,
-        "description":"Snow shoveling help needed! I am in need of assistance shoveling snow from my driveway. Can anyone lend a hand and help clear it? ",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Snowblowing Needed",
-        "t_event":"1",
-        "date":"2023-02-06",
-        "time":760,
-        "x_loc":42.088151,
-        "y_loc":-75.950854,
-        "description":"Snow shoveling help needed! I am in need of assistance shoveling snow from my driveway. Can anyone lend a hand and help clear it? ",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Snowblowing Needed",
-        "t_event":"1",
-        "date":"2023-02-06",
-        "time":790,
-        "x_loc":42.105918,
-        "y_loc": -75.989117,
-        "description":"Snow shoveling help needed! I am in need of assistance shoveling snow from my driveway. Can anyone lend a hand and help clear it? ",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Leaky Faucet",
-        "t_event":"1",
-        "date":"2023-02-07",
-        "time":720,
-        "x_loc":42.085754,
-        "y_loc":-75.967911,
-        "description":"Plumbing help needed! My kitchen faucet is leaking and I need assistance repairing it. Can anyone recommend a skilled and affordable plumber or provide guidance on fixing it myself?",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Heavy Groceries",
-        "t_event":"1",
-        "date":"2023-02-07",
-        "time":790,
-        "x_loc":42.096382,
-        "y_loc":-75.931830,
-        "description": "test",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Technology Confusion",
-        "t_event":"1",
-        "date":"2023-02-07",
-        "time":750,
-        "x_loc":42.101510,
-        "y_loc":-75.942792,
-        "description": "test",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Technology Confusion",
-        "t_event":"1",
-        "date":"2023-02-07",
-        "time":900,
-        "x_loc":42.109750,
-        "y_loc":-75.956418,
-        "description": "test",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Leaf Raking Needed",
-        "t_event":"1",
-        "date":"2023-02-06",
-        "time":630,
-        "x_loc":42.108683,
-        "y_loc":-75.969864,
-        "description": "test",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Internet Went Out",
-        "t_event":"1",
-        "date":"2023-02-06",
-        "time":630,
-        "x_loc":42.093872,
-        "y_loc":-75.925610,
-        "description": "test",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Computer Not Starting",
-        "t_event":"1",
-        "date":"2023-02-06",
-        "time":1020,
-        "x_loc":42.094873,
-        "y_loc":-75.917575,
-        "description": "test",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Lawncare Assistance",
-        "t_event":"1",
-        "date":"2023-02-05",
-        "time":1330,
-        "x_loc":42.087764,
-        "y_loc":-75.898497,
-        "description": "test",
-        "attendants": "",
-        "host": "test"
-        },
-        {
-        "name":"Lawncare Assistance",
-        "t_event":"1",
-        "date":"2023-02-05",
-        "time":1330,
-        "x_loc":42.112071,
-        "y_loc":-75.892317,
-        "description": "test",
         "attendants": "",
         "host": "test"
         }

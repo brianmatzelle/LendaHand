@@ -23,9 +23,8 @@ export default function Login() {
         navigation.replace("MainContainer")                              // Automatically logged in
       }
     })
-
     return unsubscribe
-  }, [])
+    }, [])
 
   const handleSignUp = () => {                                  // SIGN UP
     createUserWithEmailAndPassword(auth, email, password)
@@ -64,6 +63,7 @@ export default function Login() {
         style={styles.logo}
         />
       {/* </View> */}
+      <Text style={{fontSize: 30, fontWeight: "bold"}}>LendaHand</Text>
       <View style={styles.inputContainer}>
         <TextInput
           placeholder="Email"

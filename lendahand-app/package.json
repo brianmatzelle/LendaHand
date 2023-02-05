@@ -24,10 +24,14 @@
     "expo-location": "~15.0.1",
     "expo-status-bar": "~1.4.2",
     "firebase": "^9.17.1",
+    "google-images": "^2.1.0",
+    "image-search-google": "^1.3.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-native": "0.70.5",
+    "react-native-config": "^1.5.0",
     "react-native-dropdown-picker": "^5.4.4",
+    "react-native-google-image-search": "^0.1.0",
     "react-native-maps": "1.3.2",
     "react-native-pager-view": "6.0.1",
     "react-native-paper": "^5.1.4",
@@ -37,7 +41,8 @@
     "react-navigation": "^4.4.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "react-native-dotenv": "^3.4.7"
   },
   "private": true
 }

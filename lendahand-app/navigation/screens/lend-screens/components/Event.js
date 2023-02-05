@@ -1,8 +1,9 @@
-import React from "react";
-import { StyleSheet, View, Dimensions } from "react-native";
+import React, {useState} from "react";
+import { StyleSheet, View, Dimensions, Image } from "react-native";
 import { Avatar, Text, Button, Card } from "react-native-paper";
 import { ThemedButton } from "react-native-really-awesome-button";
 import { recenterTo } from "../Map";
+import { eventsDict } from "../../Lend";
 
 const windowHeight = Dimensions.get("window").height;
 const windowWidth = Dimensions.get("window").width;
@@ -22,7 +23,8 @@ var months = [
   "December",
 ];
 
-const LeftContent = (props) => <Avatar.Icon {...props} icon="folder" />;
+// const LeftContent = (props) => <Avatar.Icon {...props} icon="folder" />;
+const LeftContent = (props) => <Image style={{width: '100%', height: '100%', borderRadius: 100}} source={{uri: "https://i.pravatar.cc/"}} />
 
 function convertDate(date_str) {
   const temp_date = date_str.split("-");
@@ -37,14 +39,48 @@ function illHelp(nav) {
   nav.navigate("Map");
 }
 
-function toMap() {}
+// import React, {useEffect, useState } from 'react';
+// import { ActivityIndicator, FlatList, Text, View, StyleSheet } from 'react-native';
+
+// const Event = () => {
+//   const [isLoading, setLoading] = useState(true);
+//   const [data, setData] = useState([]);
+
+//   const getImage = async () => {
+//     fetch('https://api.openai.com/v1/images/generations', {
+//       method: 'POST',
+//       body: JSON.stringify({
+//         prompt: 
+//       })
+//     })
+//   };
+
+//   return (
+//     <View style={{flex: 1, padding: 24}}>
+//       {isLoading ? (
+//         <ActivityIndicator />
+//       ) : (
+//         <FlatList
+//           data={data}
+//           keyExtractor={({id}) => id}
+//           renderItem={({item}) => (
+//             <Text>
+//               {item.title}, {item.releaseYear}
+//             </Text>
+//           )}
+//         />
+//       )}
+//     </View>
+//   );
+// };
+
 
 export default function Event({ event, nav }) {
-  console.log(event);
-  const picurl = "https://picsum.photos/" + Math.floor(Math.random() * 1000);
+  let picurl = "https://picsum.photos/" + Math.floor(Math.random() * 1000);
   const navCopy = nav;
+  
   return (
-    <Card mode="contained" onLongPress={toMap} style={styles.card}>
+    <Card mode="contained" style={styles.card}>
       <Card.Title
         title={event.host}
         subtitle={convertDate(event.date)}
@@ -89,6 +125,7 @@ export default function Event({ event, nav }) {
     </Card>
   );
 }
+
 
 const styles = StyleSheet.create({
   event: {

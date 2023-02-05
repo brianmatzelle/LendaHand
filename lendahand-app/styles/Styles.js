@@ -9,15 +9,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 150,
-        // paddingTop: 10,
-        // height: WINDOW_HEIGHT
     },
     logo: {
         height: 200,
         width: '80%',
     },
     logoImg: {
-        // resizeMode: 'stretch', 
         width: '100%',
     },
     inputContainer: {
