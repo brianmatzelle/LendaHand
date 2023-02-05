@@ -1,22 +1,19 @@
 import React from 'react';
 import { View, ScrollView } from 'react-native';
 import { styles } from './Styles';
-
-const eventDict = [
-    { key: '1' },
-    { key: '2' },
-    { key: '3' },
-    { key: '4' }, 
-]
+import Event from './components/Event';
 
 export default function ForYou() {
+    const eventsData = require('../../../data/sample-events.json');
+    const eventsDict = eventsData.features;
+
     return (
         <ScrollView>
-            { eventDict.map(obj => {
+            { eventsDict.map(event => {
                 <View
-                    key={obj.key}
+                    key={event.key}
                 >
-
+                    
                 </View>
             })}
         </ScrollView>
