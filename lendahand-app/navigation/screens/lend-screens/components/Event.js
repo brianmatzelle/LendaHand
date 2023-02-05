@@ -63,8 +63,8 @@ export default function Event({ event, nav }) {
                 name="bruce"
                 type="secondary"
                 onPress={() => {
-                    navCopy.navigate("Map");
                     recenterTo(event);
+                    navCopy.navigate("Map");
                 }}
                 style={styles.button}
                 width={buttonWidth}

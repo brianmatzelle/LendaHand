@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { View } from 'react-native';
-import MapView, { PROVIDER_GOOGLE, Marker, AnimatedRegion, Animated } from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE, Marker, AnimatedRegion, Animated, animateToRegion } from 'react-native-maps';
 import { styles } from './Styles';
 import * as Location from 'expo-location';
 import { eventsDict } from '../Lend';
@@ -9,6 +9,7 @@ import { scrollToEvent } from './ForYou';
 const imageSrc = require('./assets/current-location.png');
 const personMarkerSrc = require('./assets/person-location.png');
 const redMarkerSrc = require('./assets/3d-marker.png');
+const mapRef = React.createRef();
 
 const BINGHAMTON_COORDS = {
   latitude: 42.0894,
@@ -45,37 +46,39 @@ function getLocation() {
     const USER_LOCATION = {
       latitude: location.coords.latitude,
       longitude: location.coords.longitude,
-      latitudeDelta: 0.03,
-      longitudeDelta: 0.02,
+      latitudeDelta: 0.01,
+      longitudeDelta: 0.01,
     };
     // return USER_LOCATION;
   }
   return BINGHAMTON_COORDS;
 }
 
-// export function recenterTo(event) {
-//   this.ref.region = {
-//     latitude: event.latitude,
-//     longitude: event.longitude,
-//     latitudeDelta: 0.03,
-//     longitudeDelta: 0.02,
-//   }
-// }
-
-export function recenterTo(event) {
-    newLocation.latitude = event.latitude,
-    newLocation.longitude = event.longitude
+let newLocation = {
+  latitude: 0,
+  longitude: 0,
+  latitudeDelta: 0.01,
+  longitudeDelta: 0.01
 }
 
+export function recenterTo(event) {
+  newLocation = {
+    latitude: event.x_loc,
+    longitude: event.y_loc,
+    latitudeDelta: 0.01,
+    ngitudeDelta: 0.01
+  };
+  mapRef.current.animateToRegion(newLocation)
+}
 
 export default function Map({ navigation }) {
   const USER_LOCATION = getLocation();
-  const newLocation = getLocation();
   const navCopy = navigation;
+  newLocation = USER_LOCATION;
   return (
     <View style={styles.container}>
       <MapView 
-      ref={ref => {this.map = ref}}
+      ref={mapRef}
       initialRegion={USER_LOCATION}
       region={newLocation}
       provider={PROVIDER_GOOGLE}

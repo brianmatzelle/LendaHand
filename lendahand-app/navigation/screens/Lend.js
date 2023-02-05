@@ -32,7 +32,7 @@ export default class Lend extends React.Component {
     const windowHeightInt = parseInt(Dimensions.get("window").height);
     const marginHeight = windowHeightInt / 18;
 
-    console.log(this.state.events[0]);
+    // console.log(this.state.events[0]);
     return (
       <Tab.Navigator
         initialRouteName={"For You"}
