@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View } from 'react-native';
-import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE, Marker, AnimatedRegion, Animated } from 'react-native-maps';
 import { styles } from './Styles';
 import * as Location from 'expo-location';
 import { eventsDict } from '../Lend';
@@ -48,30 +48,36 @@ function getLocation() {
       latitudeDelta: 0.03,
       longitudeDelta: 0.02,
     };
-    return USER_LOCATION;
+    // return USER_LOCATION;
   }
   return BINGHAMTON_COORDS;
 }
 
+// export function recenterTo(event) {
+//   this.ref.region = {
+//     latitude: event.latitude,
+//     longitude: event.longitude,
+//     latitudeDelta: 0.03,
+//     longitudeDelta: 0.02,
+//   }
+// }
+
 export function recenterTo(event) {
-  const region = {
-    latitude: event.latitude,
-    longitude: event.longitude,
-    latitudeDelta: 0.03,
-    longitudeDelta: 0.02,
-  };
-  this.map.region={region};
+    newLocation.latitude = event.latitude,
+    newLocation.longitude = event.longitude
 }
 
-export default function Map({ navigation }) {
 
+export default function Map({ navigation }) {
   const USER_LOCATION = getLocation();
+  const newLocation = getLocation();
   const navCopy = navigation;
   return (
     <View style={styles.container}>
-      <MapView ref={map => {this.map = map}}
-      // initialRegion={USER_LOCATION}
-      initialRegion={BINGHAMTON_COORDS}
+      <MapView 
+      ref={ref => {this.map = ref}}
+      initialRegion={USER_LOCATION}
+      region={newLocation}
       provider={PROVIDER_GOOGLE}
       style={styles.map} 
       >
@@ -85,7 +91,7 @@ export default function Map({ navigation }) {
         }}
         />
         { eventsDict.map((eventObj, index) => (
-            <View style={styles.event} key={eventObj.x_loc}>
+            <View style={styles.event} key={index}>
                 <Marker
                 title={eventObj.name}
                 key={index}
