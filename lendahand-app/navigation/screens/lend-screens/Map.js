@@ -11,13 +11,13 @@ const personMarkerSrc = require('./assets/person-location.png');
 const redMarkerSrc = require('./assets/3d-marker.png');
 const mapRef = React.createRef();
 
-const BINGHAMTON_COORDS = {
-  latitude: 42.0894,
-  longitude: -75.9695,
-  latitudeDelta: 0.01,
-  longitudeDelta: 0.01,
-};
-function getLocation() {
+export function getLocation() {
+  const BINGHAMTON_COORDS = {
+    latitude: 42.0894,
+    longitude: -75.9695,
+    latitudeDelta: 0.01,
+    longitudeDelta: 0.01,
+  };
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
 
@@ -49,7 +49,7 @@ function getLocation() {
       latitudeDelta: 0.01,
       longitudeDelta: 0.01,
     };
-    // return USER_LOCATION;
+    return USER_LOCATION;
   }
   return BINGHAMTON_COORDS;
 }

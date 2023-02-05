@@ -39,6 +39,26 @@ const styles = StyleSheet.create({
         fontWeight: '700',
         fontSize: 16,
     },
+    buttonText1: {
+        color: 'white',
+        fontWeight: '700',
+        fontSize: 20,
+    },
+    buttonText2: {
+        color: 'white',
+        fontWeight: '700',
+        fontSize: 16,
+    },
+    buttonText3: {
+        color: 'white',
+        fontWeight: '700',
+        fontSize: 13,
+    },
+     buttonText4: {
+        color: 'white',
+        fontWeight: '700',
+        fontSize: 11,
+    },
     buttonContainer: {
         flex: 1,
         flexDirection: 'row',
@@ -50,4 +70,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export { styles }
+export { styles, WINDOW_HEIGHT, WINDOW_WIDTH }
