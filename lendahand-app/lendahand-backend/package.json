@@ -8,7 +8,6 @@
     "serverstart": "SET DEBUG=lendahand-backend:* & npm run devstart"
   },
   "dependencies": {
-    "@tensorflow/tfjs": "^4.2.0",
     "async": "^3.2.4",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
