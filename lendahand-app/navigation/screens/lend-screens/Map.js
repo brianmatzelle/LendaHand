@@ -3,6 +3,7 @@ import { Platform, Text, View, StyleSheet } from 'react-native';
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 import { styles } from './Styles';
 import * as Location from 'expo-location';
+import { eventsDict } from '../Lend';
 
 const imageSrc = require('./assets/current-location.png');
 
@@ -70,6 +71,7 @@ export default function Map() {
           longitude: USER_LOCATION.longitude,
         }}
         />
+
       </MapView>
     </View>
   );

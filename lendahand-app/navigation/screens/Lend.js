@@ -5,6 +5,11 @@ import ForYou from './lend-screens/ForYou';
 import Map from './lend-screens/Map';
 import { Dimensions } from 'react-native';
 
+const eventsData = require('../../data/sample-events.json');
+const eventsDict = eventsData.features;
+
+export { eventsDict };
+
 export default function Lend() {
     const Tab = createMaterialTopTabNavigator();
     const windowHeightInt = parseInt(Dimensions.get('window').height);

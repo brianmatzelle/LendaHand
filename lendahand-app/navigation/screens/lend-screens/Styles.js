@@ -19,7 +19,10 @@ const styles = StyleSheet.create({
         width: windowWidth,
         height: 20,
     },
-    
+    event: {
+        margin: 10,
+
+    },
 });
 
 export { styles };
