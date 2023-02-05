@@ -4,7 +4,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import PostOptions from './post-screens/PostOptions';
 import PostButton from './post-screens/PostButton';
-import { HeaderBackButton } from '@react-navigation/stack';
 
 const Stack = createNativeStackNavigator();
 
