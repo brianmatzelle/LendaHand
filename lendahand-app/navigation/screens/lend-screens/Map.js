@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Platform, Text, View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 import { styles } from './Styles';
 import * as Location from 'expo-location';
 import { eventsDict } from '../Lend';
 
 const imageSrc = require('./assets/current-location.png');
-
+const personMarkerSrc = require('./assets/person-location.png')
 function getLocation() {
   const BINGHAMTON_COORDS = {
     latitude: 42.0894,
@@ -43,7 +43,7 @@ function getLocation() {
       latitude: location.coords.latitude,
       longitude: location.coords.longitude,
       latitudeDelta: 0.03,
-      longitudeDelta: 0.03,
+      longitudeDelta: 0.02,
     };
     return USER_LOCATION;
   }
@@ -71,7 +71,19 @@ export default function Map() {
           longitude: USER_LOCATION.longitude,
         }}
         />
-
+        { eventsDict.map(eventObj => (
+            <View style={styles.event} key={eventObj.x_loc}>
+                <Marker
+                title={eventObj.name}
+                key={eventObj.x_loc}
+                // image={personMarkerSrc}
+                coordinate={{
+                  latitude: eventObj.x_loc,
+                  longitude: eventObj.y_loc,
+                }}
+                />
+            </View>
+        ))}
       </MapView>
     </View>
   );

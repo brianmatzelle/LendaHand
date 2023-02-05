@@ -2,12 +2,10 @@ import React from 'react';
 import { StyleSheet, View, Dimensions } from 'react-native';
 import { Avatar, Text, Button, Card } from 'react-native-paper';
 import { ThemedButton } from 'react-native-really-awesome-button';
-import AwesomeButton from "react-native-really-awesome-button";
-import { TrashIcon } from "@primer/octicons-react";
 
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
-const buttonWidth = windowWidth / 3;
+const buttonWidth = windowWidth / 2.3;
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
@@ -25,35 +23,54 @@ function illHelp() {
 
 }
 
+function toMap() {
+    
+}
+
 export default function Event({ event }) {
     
     return (
         <Card
         mode='contained'
+        onLongPress={toMap}
+        style={styles.card}
         >
             <Card.Title title={event.host} subtitle={convertDate(event.date)} left={LeftContent} />
             <Card.Content>
                 <Text variant="titleLarge">{event.name}</Text>
                 <Text variant="bodyMedium">{event.description}</Text>
             </Card.Content>
-            <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
-            <Card.Actions>
+            <Card.Cover
+                style={styles.cardPicture}
+                source={{ uri: 'https://picsum.photos/700' }} />
+            <Card.Actions style={styles.buttonContainer}>
                 <ThemedButton
-                    name="rick"
-                    type="secondary"
+                    name="bruce"
+                    type="primary"
                     onPress={noThanks}
+                    style={styles.button}
+                    width={buttonWidth}
+                    borderColor="#495371"
+                    backgroundColor="#495371"
+                    backgroundDarker='#5b668c'
                 >
                 No Thanks.
                 </ThemedButton>
 
                 <ThemedButton
-                name="rick"
-                type="primary"
+                name="bruce"
+                type="secondary"
                 onPress={illHelp}
                 style={styles.button}
+                width={buttonWidth}
+                borderColor="#F1E0AC"
+                backgroundColor="#F1E0AC"
+                backgroundDarker='#98B4AA'
+                backgroundShadow='#b8ccc5'
                 >
                 I'll help!
                 </ThemedButton>
+
             </Card.Actions>
         </Card>
     );
@@ -69,10 +86,14 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     card: {
+        backgroundColor: 'white',
 
     },
+    cardPicture: {
+        margin: 20
+    },
     button: {
-        margin: 10,
+
     },
     buttonText: {
         color: 'white',
@@ -82,9 +103,11 @@ const styles = StyleSheet.create({
     buttonContainer: {
         flex: 1,
         flexDirection: 'row',
+        alignContent: 'center',
+        justifyContent: 'center',
     },
     buttonOutlineText: {
-        color: 'blue',
+        color: '#495371',
         fontWeight: '700',
         fontSize: 16,
     }

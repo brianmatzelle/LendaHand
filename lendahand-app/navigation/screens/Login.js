@@ -4,12 +4,12 @@ import { auth } from '../../firebase'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
 import { useEffect } from 'react/cjs/react.development'
 import { useNavigation } from '@react-navigation/core'
-import AwesomeButton from 'react-native-really-awesome-button'
+import { ThemedButton } from 'react-native-really-awesome-button'
 import logo from '../../assets/logo.png'
 import { styles } from '../../styles/Styles'
 
 const windowWidth = Dimensions.get('window').width;
-const buttonWidth = windowWidth / 3;
+const buttonWidth = windowWidth / 2.6;
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -55,6 +55,7 @@ export default function Login() {
     <KeyboardAvoidingView
     style={styles.container}
     behavior="padding"
+    
     >
       <View style={styles.logo}>
         <Image 
@@ -80,23 +81,26 @@ export default function Login() {
       </View>
 
       <View style={styles.buttonContainer}>
-        <AwesomeButton
+        <ThemedButton
           onPress={handleSignIn}
+          name="bruce"
           type="primary"
           style={styles.button}
           width={buttonWidth}
         >
           <Text style={styles.buttonText}>Login</Text>
-        </AwesomeButton>
+        </ThemedButton>
 
-        <AwesomeButton
+        <ThemedButton
+          name="bruce"
           onPress={handleSignUp}
           type="secondary"
           width={buttonWidth}
           style={styles.button}
         >
           <Text style={styles.buttonOutlineText}>Register</Text>
-        </AwesomeButton>
+        </ThemedButton>
+
       </View>
     </KeyboardAvoidingView>
   )

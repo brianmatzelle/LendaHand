@@ -1,11 +1,16 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+const WINDOW_WIDTH = Dimensions.get('window').width;
+const WINDOW_HEIGHT = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        paddingTop: 10,
+        marginTop: 150,
+        // paddingTop: 10,
+        // height: WINDOW_HEIGHT
     },
     logo: {
         width: '80%',
@@ -15,7 +20,9 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     inputContainer: {
-        width: '80%'
+        width: '80%',
+        marginTop: 10,
+        marginBottom: 10,
     },
     input: {
         backgroundColor: 'white',
@@ -40,7 +47,7 @@ const styles = StyleSheet.create({
         color: 'blue',
         fontWeight: '700',
         fontSize: 16,
-    }
+    },
 });
 
 export { styles }
