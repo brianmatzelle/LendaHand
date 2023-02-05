@@ -4,6 +4,7 @@ import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 import { styles } from './Styles';
 import * as Location from 'expo-location';
 import { eventsDict } from '../Lend';
+import { scrollToEvent } from './ForYou';
 
 const imageSrc = require('./assets/current-location.png');
 const personMarkerSrc = require('./assets/person-location.png');
@@ -85,6 +86,7 @@ export default function Map({ navigation }) {
                 }}
                 onPress={() => {
                   navCopy.navigate("For You");
+                  scrollToEvent(5);
                 }}
                 />
             </View>
