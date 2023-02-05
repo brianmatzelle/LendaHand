@@ -25,6 +25,7 @@ exports.event_create_get = (req, res) => {
 };
 
 exports.event_create_post = [
+  /*
   //  Convert attendants to array
   (req, res, next) => {
     if (!Array.isArray(req.body.attendants)) {
@@ -72,6 +73,7 @@ exports.event_create_post = [
       //res.redirect(event.url);
     });
   },
+  */
 ];
 
 exports.event_delete_get = (req, res) => {
