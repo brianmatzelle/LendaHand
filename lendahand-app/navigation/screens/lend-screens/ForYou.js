@@ -32,8 +32,8 @@ export default class ForYou extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView ref={(view) => (this._scrollView = view)}>
-          {this.state.events.map((eventObj) => (
-            <View style={styles.event} key={eventObj._id}>
+          {this.state.events.map((eventObj, index) => (
+            <View style={styles.event} key={index}>
               <Event event={eventObj} nav={this.props.navigation} />
             </View>
           ))}

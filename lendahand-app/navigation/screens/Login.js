@@ -17,15 +17,15 @@ export default function Login() {
   
   const navigation = useNavigation();
 
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(user => {
-      if (user) {
-        navigation.replace("MainContainer")                              // Automatically logged in
-      }
-    })
+  // useEffect(() => {
+  //   const unsubscribe = auth.onAuthStateChanged(user => {
+  //     if (user) {
+  //       navigation.replace("MainContainer")                              // Automatically logged in
+  //     }
+  //   })
 
-    return unsubscribe
-  }, [])
+  //   return unsubscribe
+  // }, [])
 
   const handleSignUp = () => {                                  // SIGN UP
     createUserWithEmailAndPassword(auth, email, password)
@@ -57,13 +57,13 @@ export default function Login() {
     behavior="padding"
     
     >
-      <View style={styles.logo}>
+      {/* <View style={styles.logo}> */}
         <Image 
         source={logo} 
         alt="logo"
-        style={styles.logoImg}
+        style={styles.logo}
         />
-      </View>
+      {/* </View> */}
       <View style={styles.inputContainer}>
         <TextInput
           placeholder="Email"

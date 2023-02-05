@@ -13,10 +13,11 @@ const styles = StyleSheet.create({
         // height: WINDOW_HEIGHT
     },
     logo: {
+        height: 200,
         width: '80%',
     },
     logoImg: {
-        resizeMode: 'stretch',
+        // resizeMode: 'stretch', 
         width: '100%',
     },
     inputContainer: {

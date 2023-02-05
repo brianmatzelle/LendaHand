@@ -49,7 +49,7 @@ export function getLocation() {
       latitudeDelta: 0.01,
       longitudeDelta: 0.01,
     };
-    return USER_LOCATION;
+    // return USER_LOCATION;
   }
   return BINGHAMTON_COORDS;
 }
