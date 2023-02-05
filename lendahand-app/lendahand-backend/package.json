@@ -1,0 +1,24 @@
+{
+  "name": "lendahand-backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "SET DEBUG=lendahand-backend:* & node ./bin/www",
+    "devstart": "node ./bin/www",
+    "serverstart": "SET DEBUG=lendahand-backend:* & npm run devstart"
+  },
+  "dependencies": {
+    "async": "^3.2.4",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "http-errors": "~1.6.3",
+    "mongoose": "^6.9.0",
+    "morgan": "~1.9.1",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
