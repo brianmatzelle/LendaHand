@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ScrollView } from 'react-native';
+import { View, ScrollView, scrollTo } from 'react-native';
 import { styles } from './Styles';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Event from './components/Event';
@@ -14,7 +14,7 @@ export function scrollToEvent(index) {
 export default function ForYou({ navigation }) {
     return (
         <View style={styles.container}>
-            <ScrollView> 
+            <ScrollView ref={view => this._scrollView = view}> 
                 { eventsDict.map(eventObj => (
                     <View style={styles.event} key={eventObj.x_loc}>
                         <Event event={eventObj} nav={navigation} />
