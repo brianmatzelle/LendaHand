@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Dimensions } from 'react-native';
 import { Avatar, Text, Button, Card } from 'react-native-paper';
 import { ThemedButton } from 'react-native-really-awesome-button';
+import { recenterTo } from '../Map';
 
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
@@ -21,6 +22,7 @@ function noThanks() {
 
 function illHelp(nav) {
     nav.navigate('Map');
+
 }
 
 function toMap() {
@@ -37,8 +39,8 @@ export default function Event({ event, nav }) {
         >
             <Card.Title title={event.host} subtitle={convertDate(event.date)} left={LeftContent} />
             <Card.Content>
-                <Text variant="titleLarge">{event.name}</Text>
-                <Text variant="bodyMedium">{event.description}</Text>
+                <Text variant="titleMedium">{event.name}</Text>
+                <Text variant="bodySmall">{event.description}</Text>
             </Card.Content>
             <Card.Cover
                 style={styles.cardPicture}
@@ -62,6 +64,7 @@ export default function Event({ event, nav }) {
                 type="secondary"
                 onPress={() => {
                     navCopy.navigate("Map");
+                    recenterTo(event);
                 }}
                 style={styles.button}
                 width={buttonWidth}
@@ -89,10 +92,10 @@ const styles = StyleSheet.create({
     },
     card: {
         backgroundColor: 'white',
-
+        // height: 400,
     },
     cardPicture: {
-        margin: 20
+        margin: 10,
     },
     button: {
 

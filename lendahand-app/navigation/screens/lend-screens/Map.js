@@ -53,13 +53,23 @@ function getLocation() {
   return BINGHAMTON_COORDS;
 }
 
+export function recenterTo(event) {
+  const region = {
+    latitude: event.latitude,
+    longitude: event.longitude,
+    latitudeDelta: 0.03,
+    longitudeDelta: 0.02,
+  };
+  this.map.region={region};
+}
+
 export default function Map({ navigation }) {
 
   const USER_LOCATION = getLocation();
   const navCopy = navigation;
   return (
     <View style={styles.container}>
-      <MapView 
+      <MapView ref={map => {this.map = map}}
       // initialRegion={USER_LOCATION}
       initialRegion={BINGHAMTON_COORDS}
       provider={PROVIDER_GOOGLE}
@@ -74,11 +84,11 @@ export default function Map({ navigation }) {
           longitude: USER_LOCATION.longitude,
         }}
         />
-        { eventsDict.map(eventObj => (
+        { eventsDict.map((eventObj, index) => (
             <View style={styles.event} key={eventObj.x_loc}>
                 <Marker
                 title={eventObj.name}
-                key={eventObj.x_loc}
+                key={index}
                 image={personMarkerSrc}
                 coordinate={{
                   latitude: eventObj.x_loc,
@@ -86,7 +96,7 @@ export default function Map({ navigation }) {
                 }}
                 onPress={() => {
                   navCopy.navigate("For You");
-                  scrollToEvent(5);
+                  scrollToEvent(index);
                 }}
                 />
             </View>
