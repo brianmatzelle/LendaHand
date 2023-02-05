@@ -19,16 +19,16 @@ function noThanks() {
 
 }
 
-function illHelp() {
-
+function illHelp(nav) {
+    nav.navigate('Map');
 }
 
 function toMap() {
     
 }
 
-export default function Event({ event }) {
-    
+export default function Event({ event, nav }) {
+    const navCopy = nav;
     return (
         <Card
         mode='contained'
@@ -60,7 +60,9 @@ export default function Event({ event }) {
                 <ThemedButton
                 name="bruce"
                 type="secondary"
-                onPress={illHelp}
+                onPress={() => {
+                    navCopy.navigate("Map");
+                }}
                 style={styles.button}
                 width={buttonWidth}
                 borderColor="#F1E0AC"

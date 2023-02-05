@@ -52,10 +52,10 @@ function getLocation() {
   return BINGHAMTON_COORDS;
 }
 
-export default function Map() {
+export default function Map({ navigation }) {
 
   const USER_LOCATION = getLocation();
-
+  const navCopy = navigation;
   return (
     <View style={styles.container}>
       <MapView 
@@ -82,6 +82,9 @@ export default function Map() {
                 coordinate={{
                   latitude: eventObj.x_loc,
                   longitude: eventObj.y_loc,
+                }}
+                onPress={() => {
+                  navCopy.navigate("For You");
                 }}
                 />
             </View>

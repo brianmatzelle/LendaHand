@@ -8,8 +8,10 @@ import axios from "axios";
 
 const eventsData = require("../../data/sample-events.json");
 const eventsDict = eventsData.features;
+const Tab = createMaterialTopTabNavigator();
 
-export { eventsDict };
+export { eventsDict, Tab };
+
 
 export default class Lend extends React.Component {
   state = {
@@ -27,13 +29,13 @@ export default class Lend extends React.Component {
   }
 
   render() {
-    const Tab = createMaterialTopTabNavigator();
     const windowHeightInt = parseInt(Dimensions.get("window").height);
     const marginHeight = windowHeightInt / 18;
 
     console.log(this.state.events[0]);
     return (
       <Tab.Navigator
+        initialRouteName={"For You"}
         screenOptions={{
             tabBarLabelStyle: { fontSize: 16 },
             tabBarStyle: {
