@@ -92,8 +92,8 @@ export default function Event({ event, nav }) {
   const [profPrompt, onChangeProfPrompt] = React.useState(
     event.host
   );
-  const [result, setResult] = React.useState("");
-  const [profResult, setProfResult] = React.useState("");
+  const [result, setResult] = React.useState("https://furntech.org.za/wp-content/uploads/2017/05/placeholder-image-300x225.png");
+  const [profResult, setProfResult] = React.useState("https://furntech.org.za/wp-content/uploads/2017/05/placeholder-image-300x225.png");
   const [loading, setLoading] = React.useState(false);
   const [imagePlaceholder, setimagePlaceholder] = React.useState(
     "https://furntech.org.za/wp-content/uploads/2017/05/placeholder-image-300x225.png"
@@ -107,7 +107,7 @@ export default function Event({ event, nav }) {
 
   const generateImage = async () => {
     try {
-      onChangePrompt(`Search ${prompt}..`);
+      // onChangePrompt(`Search ${prompt}..`);
       setLoading(true);
       const res = await openai.createImage({
         prompt: prompt,
@@ -124,10 +124,10 @@ export default function Event({ event, nav }) {
 
   const generateProf = async () => {
     try {
-      onChangePrompt(`Search ${profPrompt}..`);
+      onChangePrompt(`Search ${event.host}..`);
       setLoading(true);
       const res = await openai.createImage({
-        prompt: profPrompt,
+        prompt: event.host,
         n: 1,
         size: "256x256",
       });
@@ -139,15 +139,21 @@ export default function Event({ event, nav }) {
     }
   };
 
+  useEffect(() => {
+    generateImage();
+    generateProf();
+  }, [])
+
   const LeftContentAI = (props) => 
     <Image style={{width: '100%', height: '100%', borderRadius: 100}} source={{uri: profResult}} />
 
+  
   return (
     <Card mode="contained" style={styles.card}>
       <Card.Title
         title={event.host}
         subtitle={convertDate(event.date)}
-        left={LeftContent}
+        left={LeftContentAI}
       />
       <Card.Content>
         <Text variant="titleMedium">{event.name}</Text>
@@ -159,7 +165,7 @@ export default function Event({ event, nav }) {
         <ThemedButton
           name="bruce"
           type="primary"
-          onPress={generateImage}
+          onPress={noThanks}
           style={styles.button}
           width={buttonWidth}
           borderColor="#495371"
