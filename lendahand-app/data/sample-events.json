@@ -33,6 +33,50 @@
         "description":"Tax help needed! I need assistance with filing my taxes. Can anyone recommend a reliable and affordable tax professional or provide guidance on how to do it myself? Your help would be greatly appreciated. Thank you for considering.",
         "attendants": "",
         "host": "Terry Davis"
-        }
+        },
+        {
+            "name":"5k Volunteers",
+            "t_event":"2",
+            "date":"2023-02-08",
+            "time":930,
+            "x_loc":42.091489,
+            "y_loc":-75.965201,
+            "description":"Join us at the upcoming 5k race and help make it a success! We are looking for volunteers to assist with registration, water stations, and course marshals. Your support will ensure a safe and enjoyable race experience for all participants. Sign up now and be a part of the fun and community spirit.",
+            "attendants": "",
+            "host": "Lucy da GOAT"
+            },
+            {
+            "name":"Leaky Hose",
+            "t_event":"0",
+            "date":"2023-02-06",
+            "time":1030,
+            "x_loc":42.085516,
+            "y_loc":-75.975206,
+            "description":"Need assistance fixing a leaky hose. Any handy individuals willing to help with the repair? Much appreciated.",
+            "attendants": "",
+            "host": "Jayson Boubin"
+            },
+            {
+            "name":"Elderly Computer Help Needed",
+            "t_event":"1",
+            "date":"2023-02-06",
+            "time":630,
+            "x_loc":42.082144,
+            "y_loc":-75.955992,
+            "description":"Hello, my name is Skipper and I am an elderly man. I am in need of assistance with my computer. I'm not very tech-savvy and am having trouble with some basic functions. If there is anyone who is able to help me resolve these issues, I would be eternally grateful. Thank you!",
+            "attendants": "",
+            "host": "EILEEN"
+            },
+            {
+            "name":"Ride Needed to Church",
+            "t_event":"1",
+            "date":"2023-02-07",
+            "time":690,
+            "x_loc":42.101556,
+            "y_loc":-75.951932,
+            "description":"Need a ride to church this Sunday. Anyone available to provide transportation? Thank you for your help.",
+            "attendants": "",
+            "host": "Dave Garrison"
+            }
     ]
 }
