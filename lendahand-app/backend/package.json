@@ -5,7 +5,7 @@
   "scripts": {
     "start": "SET DEBUG=lendahand-backend:* & node ./bin/www",
     "devstart": "node ./bin/www",
-    "serverstart": "DEBUG=lendahand-backend:* npm run devstart"
+    "serverstart": "SET DEBUG=lendahand-backend:* & npm run devstart"
   },
   "dependencies": {
     "async": "^3.2.4",
